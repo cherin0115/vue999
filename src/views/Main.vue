@@ -1,0 +1,63 @@
+<template>
+  <div class="light">
+    <Header />
+    <main id="main">
+      <section id="mainCont">
+        <h2 class="sr-only">메인 컨텐츠 영역입니다.</h2>
+        <div class="main__cont">
+          <div>we provide</div>
+          <div>visual coding</div>
+          <div>solution</div>
+          <div>for your site.</div>
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </div>
+</template>
+
+<script>
+import Header from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
+
+export default {
+  components: {
+    Header,
+    Footer,
+  },
+};
+</script>
+
+<style lang="scss">
+#mainCont {
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__cont {
+  color: #fff;
+  font-size: 10vw;
+  line-height: 0.85;
+  letter-spacing: -0.0275em;
+  transition: all 2s;
+  text-transform: uppercase;
+  font-family: 'saol';
+
+  .l2 {
+    margin-left: 9vw;
+  }
+  .l3 {
+    margin-left: 18vw;
+  }
+}
+.light #mainCont {
+  background-color: #f0eeeb;
+  color: #000;
+
+  .main__cont {
+    color: #000;
+  }
+}
+</style>
